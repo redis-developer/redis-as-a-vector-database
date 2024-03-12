@@ -1,0 +1,38 @@
+
+index:
+  name: book_index
+  prefix: book
+  storage_type: json
+fields:
+  # define tag fields
+  tag:
+    - name: id
+    - name: "$.editions[*]"
+      as_name: editions
+    - name: "$.genres[*]"
+      as_name: genres
+  # define text fields
+  text:
+    - name: "$.author"
+      as_name: author
+    - name: "$.description"
+      as_name: description
+    - name: "$.title"
+      as_name: title
+  # define numeric fields
+  numeric:
+    - name: "$.pages"
+      as_name: pages
+    - name: "$.year_published"
+      as_name: year_published
+    - name: "$.votes"
+      as_name: votes
+    - name: "$.score"
+      as_name: score      
+  vector:
+    - name: "$.embedding"
+      as_name: embedding
+      dims: 384
+      distance_metric: cosine
+      algorithm: flat
+      datatype: float32
