@@ -10,7 +10,7 @@ Sample JSON object:
     "author": "Ernest Cline",
     "score": 4.25,
     "votes": 904565,
-    "description": "Librarian's note: An alternate cover edition can be found hereIN THE YEAR 2044, reality is an ugly place. The only time teenage Wade Watts really feels alive is when he's jacked into the virtual utopia known ...",
+    "description": "IN THE YEAR 2044, reality is an ugly place...",
     "year_published": 2011,
     "url": "https://www.goodreads.com/book/show/9969571-ready-player-one",
     "genres": [
