@@ -12,15 +12,16 @@ model_name = "all-MiniLM-L6-v2"
 
 model = SentenceTransformer(model_name)
 
-index = SearchIndex.from_yaml(
-    schema_path,
-    redis_url=REDIS_URL
-)
-
-# index = SearchIndex.from_dict(
-#     schema, 
+# Alternative method for creating search index from a yaml file
+# index = SearchIndex.from_yaml(
+#     schema_path,
 #     redis_url=REDIS_URL
 # )
+
+index = SearchIndex.from_dict(
+    schema, 
+    redis_url=REDIS_URL
+)
 
 if not index.exists():
     index.create(overwrite=False)
