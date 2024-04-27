@@ -28,7 +28,7 @@ if not index.exists():
 
 query = model.encode("Dinosaurs are still on the earth")
 
-tag_filter = Tag("genres") == "Science Fiction"
+tag_filter = (Tag("genres") != "Fantasy") & (Tag("genres") != "Science Fiction Fantasy")
 
 query = VectorQuery(
     vector = query,
